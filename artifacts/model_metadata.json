@@ -1,0 +1,88 @@
+{
+  "project_name": "PredictOps AI",
+  "version": "1.0.0",
+  "dataset": "AI4I 2020 Predictive Maintenance (UCI)",
+  "class_imbalance": "28:1",
+  "train_samples": 8000,
+  "test_samples": 2000,
+  "best_hyperparameters": {
+    "classifier__max_depth": 14,
+    "classifier__max_features": "sqrt",
+    "classifier__min_samples_leaf": 2,
+    "classifier__n_estimators": 100
+  },
+  "holdout_metrics_default_t050": {
+    "Model": "RandomForest (Holdout, t=0.50)",
+    "Threshold": 0.5,
+    "Accuracy": 0.989,
+    "Balanced_Accuracy": 0.9305,
+    "Precision": 0.8194,
+    "Recall": 0.8676,
+    "F1_Score": 0.8429,
+    "ROC_AUC": 0.9859,
+    "PR_AUC": 0.8766,
+    "Brier_Score": 0.012,
+    "TP": 59,
+    "FP": 13,
+    "FN": 9,
+    "TN": 1919
+  },
+  "holdout_metrics_tuned_t040": {
+    "Model": "RandomForest (Holdout, t=0.40)",
+    "Threshold": 0.4,
+    "Accuracy": 0.9805,
+    "Balanced_Accuracy": 0.9261,
+    "Precision": 0.6629,
+    "Recall": 0.8676,
+    "F1_Score": 0.7516,
+    "ROC_AUC": 0.9859,
+    "PR_AUC": 0.8766,
+    "Brier_Score": 0.012,
+    "TP": 59,
+    "FP": 30,
+    "FN": 9,
+    "TN": 1902
+  },
+  "feature_importances": [
+    {
+      "Feature": "Rotational speed [rpm]",
+      "Tree_MDI_Importance": 0.1977
+    },
+    {
+      "Feature": "mechanical_power",
+      "Tree_MDI_Importance": 0.1955
+    },
+    {
+      "Feature": "Torque [Nm]",
+      "Tree_MDI_Importance": 0.1818
+    },
+    {
+      "Feature": "Tool wear [min]",
+      "Tree_MDI_Importance": 0.1426
+    },
+    {
+      "Feature": "wear_strain",
+      "Tree_MDI_Importance": 0.121
+    },
+    {
+      "Feature": "temp_difference",
+      "Tree_MDI_Importance": 0.0837
+    },
+    {
+      "Feature": "Air temperature [K]",
+      "Tree_MDI_Importance": 0.0444
+    },
+    {
+      "Feature": "Process temperature [K]",
+      "Tree_MDI_Importance": 0.0259
+    },
+    {
+      "Feature": "Type_L",
+      "Tree_MDI_Importance": 0.0037
+    },
+    {
+      "Feature": "Type_M",
+      "Tree_MDI_Importance": 0.0037
+    }
+  ]
+}
